@@ -1,0 +1,8 @@
+FROM resin/rpi-raspbian
+
+RUN apt-get update && apt-get -y install python3 sense-hat raspberrypi-bootloader
+
+COPY . /app
+WORKDIR /app
+
+CMD ./start.sh
